@@ -1,0 +1,10 @@
+#!/bin/bash
+for img in pos/*.*; do
+	filename=${img}
+	newfile=${filename%.*}
+   	#newfile=${filename%.*} | cut -d/ -f2-
+   	f=${newfile#*/}
+   	echo /new_pos/$f
+   # convert "$filename" "$newfile.jpg"
+   # echo "$img converted to new_pos/*%$newfile.png"
+done
